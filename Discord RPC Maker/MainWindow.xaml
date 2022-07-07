@@ -1,0 +1,200 @@
+﻿<Window x:Class="Discord_RPC_Maker.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Discord_RPC_Maker"
+        mc:Ignorable="d"
+        Title="Discord RPC Maker - J0nathan550" Height="720" Width="1280" Icon="/icons/Discord_icon.png" SizeToContent="Manual" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="1,0" StartPoint="0.2,0">
+                <GradientStop Color="#FF5F30A7"/>
+                <GradientStop Color="#FF26AEDC" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Margin="0,15,0,0" Grid.ColumnSpan="2" HorizontalAlignment="Center" >
+            <StackPanel.Resources>
+                <Style TargetType="{x:Type TextBox}">
+                    <Setter Property="Margin" Value="0,15,0,0"/>
+                </Style>
+                <Style TargetType="{x:Type RadioButton}">
+                    <Setter Property="Margin" Value="0,15,0,0"/>
+                </Style>
+            </StackPanel.Resources>
+            <TextBox x:Name="NameTextBox" TextWrapping="Wrap" TextAlignment="Center" Padding="0,5,0,0" Text="Application ID" Width="638" HorizontalAlignment="Left" Height="30" Foreground="White" FontWeight="Bold" FontFamily="Cascadia Code" Cursor="Hand"  SelectionBrush="White">
+                <TextBox.Background>
+                    <LinearGradientBrush EndPoint="1,1" StartPoint="0.001,0">
+                        <GradientStop Color="#FF5F30A7"/>
+                        <GradientStop Color="#FF26AEDC" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBox.Background>
+                <TextBox.BorderBrush>
+                    <LinearGradientBrush EndPoint="1,1" StartPoint="0.001,0">
+                        <GradientStop Color="#FF9560E8"/>
+                        <GradientStop Color="#FF00F9FF" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBox.BorderBrush>
+            </TextBox>
+            <TextBox x:Name="DetailsTextBox" TextWrapping="Wrap" TextAlignment="Center" Padding="0,5,0,0" Text="Details" Width="638" HorizontalAlignment="Left" Height="30" Foreground="White" FontWeight="Bold" FontFamily="Cascadia Code" Cursor="Hand" SelectionBrush="White">
+                <TextBox.Background>
+                    <LinearGradientBrush EndPoint="1,1" StartPoint="0.001,0">
+                        <GradientStop Color="#FF5F30A7"/>
+                        <GradientStop Color="#FF26AEDC" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBox.Background>
+                <TextBox.BorderBrush>
+                    <LinearGradientBrush EndPoint="1,1" StartPoint="0.001,0">
+                        <GradientStop Color="#FF9560E8"/>
+                        <GradientStop Color="#FF00F9FF" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBox.BorderBrush>
+            </TextBox>
+            <TextBox x:Name="StateTextBox" TextWrapping="Wrap" TextAlignment="Center" Padding="0,5,0,0" Text="State" Width="638" HorizontalAlignment="Left" Height="30" Foreground="White" FontWeight="Bold" FontFamily="Cascadia Code" Cursor="Hand" SelectionBrush="White">
+                <TextBox.Background>
+                    <LinearGradientBrush EndPoint="1,1" StartPoint="0.001,0">
+                        <GradientStop Color="#FF5F30A7"/>
+                        <GradientStop Color="#FF26AEDC" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBox.Background>
+                <TextBox.BorderBrush>
+                    <LinearGradientBrush EndPoint="1,1" StartPoint="0.001,0">
+                        <GradientStop Color="#FF9560E8"/>
+                        <GradientStop Color="#FF00F9FF" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBox.BorderBrush>
+            </TextBox>
+            <TextBox x:Name="LargeImageLinkTextBox" TextWrapping="Wrap" TextAlignment="Center" Padding="0,5,0,0" Text="Large Image Link" Width="638" HorizontalAlignment="Left" Height="30" Foreground="White" FontWeight="Bold" FontFamily="Cascadia Code" Cursor="Hand" SelectionBrush="White">
+                <TextBox.Background>
+                    <LinearGradientBrush EndPoint="1,1" StartPoint="0.001,0">
+                        <GradientStop Color="#FF5F30A7"/>
+                        <GradientStop Color="#FF26AEDC" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBox.Background>
+                <TextBox.BorderBrush>
+                    <LinearGradientBrush EndPoint="1,1" StartPoint="0.001,0">
+                        <GradientStop Color="#FF9560E8"/>
+                        <GradientStop Color="#FF00F9FF" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBox.BorderBrush>
+            </TextBox>
+            <TextBox x:Name="LargeImageTextTextBox" TextWrapping="Wrap" TextAlignment="Center" Padding="0,5,0,0" Text="Large Image Text" Width="638" HorizontalAlignment="Left" Height="30" Foreground="White" FontWeight="Bold" FontFamily="Cascadia Code" Cursor="Hand" SelectionBrush="White">
+                <TextBox.Background>
+                    <LinearGradientBrush EndPoint="1,1" StartPoint="0.001,0">
+                        <GradientStop Color="#FF5F30A7"/>
+                        <GradientStop Color="#FF26AEDC" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBox.Background>
+                <TextBox.BorderBrush>
+                    <LinearGradientBrush EndPoint="1,1" StartPoint="0.001,0">
+                        <GradientStop Color="#FF9560E8"/>
+                        <GradientStop Color="#FF00F9FF" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBox.BorderBrush>
+            </TextBox>
+            <TextBox x:Name="SmallImageLinkTextBox" TextWrapping="Wrap" TextAlignment="Center" Padding="0,5,0,0" Text="Small Image Link" Width="638" HorizontalAlignment="Left" Height="30" Foreground="White" FontWeight="Bold" FontFamily="Cascadia Code" Cursor="Hand" SelectionBrush="White">
+                <TextBox.Background>
+                    <LinearGradientBrush EndPoint="1,1" StartPoint="0.001,0">
+                        <GradientStop Color="#FF5F30A7"/>
+                        <GradientStop Color="#FF26AEDC" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBox.Background>
+                <TextBox.BorderBrush>
+                    <LinearGradientBrush EndPoint="1,1" StartPoint="0.001,0">
+                        <GradientStop Color="#FF9560E8"/>
+                        <GradientStop Color="#FF00F9FF" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBox.BorderBrush>
+            </TextBox>
+            <TextBox x:Name="SmallImageTextTextBox" TextWrapping="Wrap" TextAlignment="Center" Padding="0,5,0,0" Text="Small Image Text" Width="638" HorizontalAlignment="Left" Height="30" Foreground="White" FontWeight="Bold" FontFamily="Cascadia Code" Cursor="Hand" SelectionBrush="White">
+                <TextBox.Background>
+                    <LinearGradientBrush EndPoint="1,1" StartPoint="0.001,0">
+                        <GradientStop Color="#FF5F30A7"/>
+                        <GradientStop Color="#FF26AEDC" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBox.Background>
+                <TextBox.BorderBrush>
+                    <LinearGradientBrush EndPoint="1,1" StartPoint="0.001,0">
+                        <GradientStop Color="#FF9560E8"/>
+                        <GradientStop Color="#FF00F9FF" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBox.BorderBrush>
+            </TextBox>
+            <TextBox x:Name="ButtonLabelTextBox" TextWrapping="Wrap" TextAlignment="Center" Padding="0,5,0,0" Text="Button Label Text" Width="638" HorizontalAlignment="Left" Height="30" Foreground="White" FontWeight="Bold" FontFamily="Cascadia Code" Cursor="Hand" SelectionBrush="White">
+                <TextBox.Background>
+                    <LinearGradientBrush EndPoint="1,1" StartPoint="0.001,0">
+                        <GradientStop Color="#FF5F30A7"/>
+                        <GradientStop Color="#FF26AEDC" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBox.Background>
+                <TextBox.BorderBrush>
+                    <LinearGradientBrush EndPoint="1,1" StartPoint="0.001,0">
+                        <GradientStop Color="#FF9560E8"/>
+                        <GradientStop Color="#FF00F9FF" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBox.BorderBrush>
+            </TextBox>
+            <TextBox x:Name="ButtonLinkTextBox" TextWrapping="Wrap" TextAlignment="Center" Padding="0,5,0,0" Text="Button Url Text" Width="638" HorizontalAlignment="Left" Height="30" Foreground="White" FontWeight="Bold" FontFamily="Cascadia Code" Cursor="Hand" SelectionBrush="White">
+                <TextBox.Background>
+                    <LinearGradientBrush EndPoint="1,1" StartPoint="0.001,0">
+                        <GradientStop Color="#FF5F30A7"/>
+                        <GradientStop Color="#FF26AEDC" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBox.Background>
+                <TextBox.BorderBrush>
+                    <LinearGradientBrush EndPoint="1,1" StartPoint="0.001,0">
+                        <GradientStop Color="#FF9560E8"/>
+                        <GradientStop Color="#FF00F9FF" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBox.BorderBrush>
+            </TextBox>
+            <TextBox x:Name="ButtonLabelTextBox1" TextWrapping="Wrap" TextAlignment="Center" Padding="0,5,0,0" Text="Second Button Label Text" Width="638" HorizontalAlignment="Left" Height="30" Foreground="White" FontWeight="Bold" FontFamily="Cascadia Code" Cursor="Hand" SelectionBrush="White">
+                <TextBox.Background>
+                    <LinearGradientBrush EndPoint="1,1" StartPoint="0.001,0">
+                        <GradientStop Color="#FF5F30A7"/>
+                        <GradientStop Color="#FF26AEDC" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBox.Background>
+                <TextBox.BorderBrush>
+                    <LinearGradientBrush EndPoint="1,1" StartPoint="0.001,0">
+                        <GradientStop Color="#FF9560E8"/>
+                        <GradientStop Color="#FF00F9FF" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBox.BorderBrush>
+            </TextBox>
+            <TextBox x:Name="ButtonLinkTextBox1" TextWrapping="Wrap" TextAlignment="Center" Padding="0,5,0,0" Text="Second Button Link Text" Width="638" HorizontalAlignment="Left" Height="30" Foreground="White" FontWeight="Bold" FontFamily="Cascadia Code" Cursor="Hand" SelectionBrush="White">
+                <TextBox.Background>
+                    <LinearGradientBrush EndPoint="1,1" StartPoint="0.001,0">
+                        <GradientStop Color="#FF5F30A7"/>
+                        <GradientStop Color="#FF26AEDC" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBox.Background>
+                <TextBox.BorderBrush>
+                    <LinearGradientBrush EndPoint="1,1" StartPoint="0.001,0">
+                        <GradientStop Color="#FF9560E8"/>
+                        <GradientStop Color="#FF00F9FF" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBox.BorderBrush>
+            </TextBox>
+            <Button x:Name="PlayButton" Content="Play" Margin="0,100,0,0" Height="55" Foreground="White" FontFamily="Cascadia Code" Click="PlayButtonClick">
+                <Button.BorderBrush>
+                    <LinearGradientBrush EndPoint="1,1" StartPoint="0.001,0">
+                        <GradientStop Color="#FF9560E8"/>
+                        <GradientStop Color="#FF00F9FF" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.BorderBrush>
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="1,1" StartPoint="0.001,0">
+                        <GradientStop Color="#FF5F30A7"/>
+                        <GradientStop Color="#FF26AEDC" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+
+        </StackPanel>
+    </Grid>
+</Window>
