@@ -3,6 +3,8 @@ using System.Windows;
 using DiscordRPC;
 using Newtonsoft.Json;
 using System.IO;
+using System.Diagnostics;
+
 namespace Discord_RPC_Maker
 {
     public partial class MainWindow : Window
@@ -13,6 +15,8 @@ namespace Discord_RPC_Maker
         private string savingPath = Application.Current.MainWindow + "config.json";
 
         private bool isClicked = false;
+
+        private Timestamps? currentTimeStamp = null;
 
         public MainWindow()
         {
@@ -46,7 +50,10 @@ namespace Discord_RPC_Maker
                 isClicked = !isClicked;
                 if (isClicked)
                 {
-
+                    if (currentTimeStamp == null)
+                    {
+                        currentTimeStamp = Timestamps.Now;
+                    }
                     applicationSave.ApplicationID = NameTextBox.Text;
                     applicationSave.Details = DetailsTextBox.Text;
                     applicationSave.State = StateTextBox.Text;
@@ -79,18 +86,20 @@ namespace Discord_RPC_Maker
                         new DiscordRPC.Button { Label = ButtonLabelTextBox.Text, Url = ButtonLinkTextBox.Text },
                         new DiscordRPC.Button { Label = ButtonLabelTextBox1.Text, Url = ButtonLinkTextBox1.Text },
                         },
-                        Timestamps = Timestamps.Now,
+                        Timestamps = currentTimeStamp,
 
                     });
                     var timer = new System.Timers.Timer(150);
                     timer.Elapsed += (sender, args) => { client.Invoke(); };
                     timer.Start();
                     MessageBox.Show("Discord RPC, loaded and working great!", "Information!", MessageBoxButton.OK, MessageBoxImage.Information);
+                    PlayButton.Content = "Stop";
                 }
                 else
                 {
                     client.Dispose();
                     MessageBox.Show("Turned off!", "Information!", MessageBoxButton.OK, MessageBoxImage.Information);
+                    PlayButton.Content = "Play";
                 }
             }
             catch (Exception ex)
@@ -98,6 +107,26 @@ namespace Discord_RPC_Maker
                 MessageBox.Show($"Looks like you forget something to put. Check clearly. Common issue: Assets in Application ID doesn't have an image that you typed. System Error: {ex.Message}", "Error!", MessageBoxButton.OK, MessageBoxImage.Error);
                 throw;
             }
+        }
+
+        private void ResetTimeButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (isClicked)
+            {
+                MessageBox.Show("Stop the RPC process to clear the timestamp!", "Error!", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+            currentTimeStamp = null;
+            MessageBox.Show("Timestamp cleared!", "Information!", MessageBoxButton.OK, MessageBoxImage.Information);
+        }
+
+        private void ClickVersion(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+            Process.Start(new ProcessStartInfo
+            {
+                FileName = "https://github.com/J0nathan550/Discord-RPC-Maker",
+                UseShellExecute = true
+            });
         }
     }
 

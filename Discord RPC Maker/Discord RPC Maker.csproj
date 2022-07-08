@@ -6,11 +6,19 @@
     <RootNamespace>Discord_RPC_Maker</RootNamespace>
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
+    <ApplicationIcon>icons\Discord_icon.ico</ApplicationIcon>
+    <Version>1.0.1</Version>
+    <Company>J0nathan550</Company>
+    <Authors>J0nathan550</Authors>
   </PropertyGroup>
 
   <ItemGroup>
     <None Remove="Discord_icon.svg" />
     <None Remove="icons\Discord_icon.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="icons\Discord_icon.ico" />
   </ItemGroup>
 
   <ItemGroup>

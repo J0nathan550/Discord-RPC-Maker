@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Discord_RPC_Maker"
         mc:Ignorable="d"
-        Title="Discord RPC Maker - J0nathan550" Height="720" Width="1280" Icon="/icons/Discord_icon.png" SizeToContent="Manual" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+        Title="Discord RPC Maker - J0nathan550" Height="720" Width="1280" Icon="/icons/Discord_icon.png" SizeToContent="Manual" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize">
     <Grid>
         <Grid.Background>
             <LinearGradientBrush EndPoint="1,0" StartPoint="0.2,0">
@@ -180,7 +180,7 @@
                     </LinearGradientBrush>
                 </TextBox.BorderBrush>
             </TextBox>
-            <Button x:Name="PlayButton" Content="Play" Margin="0,100,0,0" Height="55" Foreground="White" FontFamily="Cascadia Code" Click="PlayButtonClick">
+            <Button x:Name="PlayButton" Content="Play" Margin="0,30,0,0" Height="55" Foreground="White" FontFamily="Cascadia Code" Click="PlayButtonClick">
                 <Button.BorderBrush>
                     <LinearGradientBrush EndPoint="1,1" StartPoint="0.001,0">
                         <GradientStop Color="#FF9560E8"/>
@@ -194,7 +194,22 @@
                     </LinearGradientBrush>
                 </Button.Background>
             </Button>
-
+            <Button x:Name="ResetTimeButton" Content="Clear Timestamp" Margin="0,20,0,0" Height="55" Foreground="White" FontFamily="Cascadia Code" Click="ResetTimeButton_Click">
+                <Button.BorderBrush>
+                    <LinearGradientBrush EndPoint="1,1" StartPoint="0.001,0">
+                        <GradientStop Color="#FF9560E8"/>
+                        <GradientStop Color="#FF00F9FF" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.BorderBrush>
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="1,1" StartPoint="0.001,0">
+                        <GradientStop Color="#FF5F30A7"/>
+                        <GradientStop Color="#FF26AEDC" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
         </StackPanel>
+        <Label  Grid.Column="1" Content="Version 1.0.1" HorizontalAlignment="Left" Margin="497,646,0,0" VerticalAlignment="Top" FontFamily="Cascadia Code" FontWeight="Bold" Foreground="White" Width="133" Cursor="Help" MouseDown="ClickVersion"/>
+
     </Grid>
 </Window>
