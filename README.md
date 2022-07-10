@@ -18,4 +18,4 @@ NOTE: Application is require `6.0.0` version of `.Net Core`, application can war
 
 **Links: https://dotnet.microsoft.com/en-us/download/dotnet/6.0**
 
-** Discord RPC Maker maded with Discord RPC library by Lachee: https://github.com/Lachee/discord-rpc-csharp **
+**Discord RPC Maker maded with Discord RPC library by Lachee: https://github.com/Lachee/discord-rpc-csharp**
