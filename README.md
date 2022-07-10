@@ -17,3 +17,5 @@
 NOTE: Application is require `6.0.0` version of `.Net Core`, application can warn you that you don't have this driver. Simply what you can do is press **`OK`** in application. And then download `.Net Core 6.0.0` for **common use (For application)**. If that didn't work, try also download the **Console Drivers**. Turn on the application with **Admin Rights**. Or simply restart your **PC**. If nothing worked, well sorry for waisting your time. Your pc can't handle this application.
 
 **Links: https://dotnet.microsoft.com/en-us/download/dotnet/6.0**
+
+** Discord RPC Maker maded with Discord RPC library by Lachee: https://github.com/Lachee/discord-rpc-csharp **
